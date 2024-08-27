@@ -1,7 +1,7 @@
 let btn = document.getElementById("btn");
 
 // fetch api
-const url = "https://official-joke-api.appspot.com/random_joke";
+const url = "https://v2.jokeapi.dev/joke/Any?blacklistFlags=nsfw";
 
 let x = function () {
   let index = Math.floor(Math.random() * 29);
@@ -14,8 +14,17 @@ let x = function () {
       console.log(data.punchline);
 
       let setup = data.setup;
-      let punchline = data.punchline;
-      let joke = document.getElementById("joke");
-      joke.innerHTML = `<span class="highlight">Me:</span> ${setup} <br/> <br/> <span class="highlight">Joker:</span> ${punchline}`;
+      let delivery = data.delivery;
+      let type = data.type;
+      let joke = data.joke;
+
+      let joke_container = document.getElementById("joke");
+
+      if (type == "twopart") {
+        joke_container.innerHTML = `<span class="highlight">Me:</span> ${setup} <br/> <br/> <span class="highlight">Joker:</span> ${delivery}`;
+      }
+      if (type == "single") {
+        joke_container.innerHTML = `<span class="highlight">Me:</span> ${joke}`;
+      }
     });
 };
