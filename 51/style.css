@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=New+Amsterdam&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  background: #003049;
+  text-align: center;
+}
+
+#clock {
+  font-family: "New Amsterdam", sans-serif;
+  font-size: 4rem;
+  color: #d62828;
+  font-weight: 700;
+  line-height: 3rem;
+}
+
+#clock h1 {
+  font-size: 2rem;
+  font-weight: 500;
+  color: #fcbf49;
+}
+
+.text-glow {
+  text-shadow: 0 0 10px #fff, 0 0 42px #0fa;
+  color: white;
+  font-size: 30px;
+  text-align: center;
+}
