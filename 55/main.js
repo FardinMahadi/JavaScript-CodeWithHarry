@@ -14,17 +14,17 @@ let p2 = new Promise((resolve, reject) => {
   }, 5000);
 });
 
+// to get the value
 p1.then((value) => {
   console.log(value);
 });
 
-p2.catch((error) => {
-  console.log("Some error occured in p2");
-});
-
-// p2.then((value) => {
-//   console.log(value);
-// });
-
-console.log(p1);
-console.log(p2);
+// to catch the error
+p2.then(
+  (value) => {
+    console.log(value);
+  },
+  (error) => {
+    console.log(error);
+  }
+);
