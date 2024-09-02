@@ -26,7 +26,7 @@ function addNote() {
   let title = prompt("Enter the title: ");
   let text = prompt("Enter the note: ");
 
-  if (title && text) {
+  if (title || text) {
     // Create a note object
     let note = {
       title: title,
